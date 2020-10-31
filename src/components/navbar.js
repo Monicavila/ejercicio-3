@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from "./logo";
 
-import logo from "../icons/iconfinder_youtube_294703.png";
 import SearchBar from "./search-bar";
 import imgBar from "../images/toRse.png"
 import SmIcon from "./smicon";
@@ -18,7 +17,7 @@ import imgLogin from "../images/login_button.png"
 export default function Navbar(props) {
   return <div className="navbar">
     <Logo 
-      logo={logo}
+      logo={props.logo}
     />
     <SearchBar 
       image={imgBar}
