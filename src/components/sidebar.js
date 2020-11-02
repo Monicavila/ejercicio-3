@@ -3,24 +3,17 @@ import Icon from "./icon";
 import "../styles.css";
 
 export function Sidebar(props) {
+  const icons = props.icons;
+  const listItems = icons.map((item, index) =>
+    <Icon
+        key={index.toString()}
+        iconUrl={item.icon}
+        title={item.title}
+      />
+  );
   return (
     <div className="sidebar">
-      <Icon
-        iconUrl={props.icons[0].icon}
-        title={props.icons[0].title}
-      />
-      <Icon
-        iconUrl={props.icons[1].icon}
-        title={props.icons[1].title}
-      />
-      <Icon
-        iconUrl={props.icons[2].icon}
-        title={props.icons[2].title}
-      />
-      <Icon
-        iconUrl={props.icons[3].icon}
-        title={props.icons[3].title}
-      />
+      {listItems}
     </div>
 
     
